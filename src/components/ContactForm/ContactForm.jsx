@@ -37,36 +37,36 @@ export const ContactForm = ({ addContact }) => {
     setName('');
     setNumber('');
   };
-  {
-    return (
-      <Form onSubmit={handleSubmitForm}>
-        <Label>
-          Name
-          <TextFiled
-            onChange={handleChangeInput}
-            type="text"
-            name="name"
-            pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-            title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-            required
-            value={name}
-          />
-        </Label>
-        <Label htmlFor="">
-          Number
-          <TextFiled
-            onChange={handleChangeInput}
-            type="tel"
-            name="number"
-            pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-            title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-            required
-            value={number}
-          />
-        </Label>
-        <AddcontactBtn type="submit">ADD CONTACT</AddcontactBtn>
-      </Form>
-    );
-  }
+
+  return (
+    <Form onSubmit={handleSubmitForm}>
+      <Label>
+        Name
+        <TextFiled
+          onChange={handleChangeInput}
+          type="text"
+          name="name"
+          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+          required
+          value={name}
+        />
+      </Label>
+      <Label htmlFor="">
+        Number
+        <TextFiled
+          onChange={handleChangeInput}
+          type="tel"
+          name="number"
+          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+          title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+          required
+          value={number}
+        />
+      </Label>
+      <AddcontactBtn type="submit">ADD CONTACT</AddcontactBtn>
+    </Form>
+  );
 };
+
 ContactForm.propTypes = { addContact: PropTypes.func.isRequired };
