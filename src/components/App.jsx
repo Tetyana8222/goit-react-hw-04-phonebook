@@ -38,14 +38,14 @@ export function App() {
     setFilter(event.currentTarget.value);
   };
 
-  useEffect(() => {
-    const savedContacts = JSON.parse(localStorage.getItem('contacts'));
-    if (savedContacts) {
-      setContacts(savedContacts);
-    } else {
-      setContacts([]);
-    }
-  }, [setContacts]);
+  // useEffect(() => {
+  //   const savedContacts = JSON.parse(localStorage.getItem('contacts'));
+  //   if (savedContacts) {
+  //     setContacts(savedContacts);
+  //   } else {
+  //     setContacts([]);
+  //   }
+  // }, [setContacts]);
 
   return (
     <Container>
